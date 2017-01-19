@@ -15,20 +15,43 @@
 # in the templates via {{ site.myvariable }}.
 title: Your awesome title
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+description: > # this means to ignore newlines until the next key ("*:").
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# the subpath of your site, e.g. /blog
+baseurl: ""
+
+# the base hostname & protocol for your site, e.g. http://example.com
+url: ""
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus:
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+
+#
 # Build settings
+#
+permalink: /blog/:title/
+
 markdown: kramdown
+
 theme: minima
+
 gems:
   - jekyll-feed
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
